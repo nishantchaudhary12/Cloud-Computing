@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>1001568781 Chaudhary, Nishant</h1>
+        <br>
+
+    <p>Query count {{num}} </p>
+    <br>
+    <p>Time taken: {{time}} </p>
+    <br>
+    {%for each in data%}
+        <p>Place- {{each[0]}}</p>
+        <p>Latitude- {{each[1]}}</p>
+        <p>LONGITUDE- {{each[2]}}</p>
+        <p>DEPTH- {{each[3]}}</p>
+        <p>MAGNITUDE- {{each[4]}}</p>
+        <p>PLACE- {{each[6]}}</p>
+        <br><br>
+    {%endfor%}
+</body>
+</html>
