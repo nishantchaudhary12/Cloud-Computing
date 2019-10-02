@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clusters Result</title>
+</head>
+<body>
+      <h1> 1001568781 Chaudhary, Nishant </h1>
+    <br>
+    <br>
+    {{centroids}}
+    #############
+    {{clusters}}
+    {%for each in range(centroids|length)%}
+        <p> Cluster Point: {{centroids[each]}} </p>
+        <p> Points </p>
+        <p> {{clusters[each]}} </p>
+        <br><br>
+    {%endfor%}
+</body>
+</html>
+</body>
+</html>
