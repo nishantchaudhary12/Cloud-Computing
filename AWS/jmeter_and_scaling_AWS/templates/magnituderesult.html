@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magnitude results</title>
+</head>
+<body>
+    <p>Time taken --> {{time}} </p>
+
+<br>
+{%for each in data%}
+<p>Laitude --> {{each[0]}}</p>
+<p>Longitude --> {{each[1]}} </p>
+<p>Place --> {{each[2]}} </p>
+<p>Magnitude --> {{each[3]}} </p>
+<br>
+{%endfor%}
+</body>
+</html>
