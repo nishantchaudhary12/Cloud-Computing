@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cluster Result</title>
+</head>
+<body>
+    <h1> 1001568781 Chaudhary, Nishant </h1>
+    <br>
+    <br>
+
+    <p>Time Taken: {{time1}} </p>
+     {%for each in range(data|length)%}
+        <p> Cluster Point: {{data[each]}} </p>
+        <p> Length </p>
+        <p> {{leng[each]}} </p>
+        <br><br>
+    {%endfor%}
+    {%for each in dist%}
+    <p>Distance - {{each}}
+        <p>
+            {%endfor%}
+
+    <form action="/centroiddata" method="POST">
+      <div class="container">
+
+        <label for="Name"><b> Point x</b></label>
+        <input type="text" placeholder="Enter Points" name="x">
+
+        <label for="Name"><b> Point y</b></label>
+        <input type="text" placeholder="Enter Points" name="y">
+
+
+        <br>
+        <button type="submit" class="registerbtn">Search</button>
+      </div>
+    </form>
+
+
+
+</body>
+</html>
