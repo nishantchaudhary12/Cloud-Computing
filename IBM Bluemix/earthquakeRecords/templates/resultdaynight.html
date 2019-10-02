@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day and night</title>
+</head>
+<body>
+    <h1> 1001568781 Chaudhary, Nishant </h1>
+
+        <div class="container">
+        <h1>Search Results</h1>
+        <h2>Day</h2>
+        {%for each in data_day%}
+            <p> TIME - {{each[0]}} <br>
+                LATITUDE - {{each[1]}} <br>
+                LONGITUDE - {{each[2]}} <br>
+                DEPTH - {{each[3]}} <br>
+                MAG - {{each[4]}} <br>
+                PLACE - {{each[5]}} <br>
+            <br>
+            <br>
+        {%endfor%}
+        <p>Number of earthquakes {{day}}</p>
+        <p>Number of high magnitude earthquakes(>4.0) {{high_day}}</p>
+        <br>
+        <br>
+        <h2>Night</h2>
+        {%for each in data_night%}
+            <p> TIME - {{each[0]}} <br>
+                LATITUDE - {{each[1]}} <br>
+                LONGITUDE - {{each[2]}} <br>
+                DEPTH - {{each[3]}} <br>
+                MAG - {{each[4]}} <br>
+                PLACE - {{each[5]}} <br>
+            <br>
+            <br>
+        {%endfor%}
+        <p>Number of earthquakes {{night}}</p>
+        <p>Number of high magnitude earthquakes(>4.0) {{high_night}}</p>
+
+        <br>
+        <br>
+        {%if high_night > high_day %}
+            <p>More high magnitude earthquakes happened at night</p>
+        {%else%}
+            <p>More high magnitude earthquakes happened at day</p>
+        {%endif%}
+
+
+        </div>
+</body>
+</html>
