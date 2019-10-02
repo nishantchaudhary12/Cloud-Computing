@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+     <h1> 1001568781 Chaudhary, Nishant </h1>
+
+        <div class="container">
+        <h1>Search Results</h1>
+        {%for each in data%}
+            <p> TIME - {{each[0]}} <br>
+                LATITUDE - {{each[1]}} <br>
+                LONGITUDE - {{each[2]}} <br>
+                DEPTH - {{each[3]}} <br>
+                MAG - {{each[4]}} <br>
+                PLACE - {{each[5]}} <br>
+            <br>
+            <br>
+        {%endfor%}
+        <p>Number of earthquakes {{num}}</p>
+        </div>
+</body>
+</html>
