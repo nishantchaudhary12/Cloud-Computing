@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clusters Result</title>
+</head>
+<body>
+      <h1> 1001568781 Chaudhary, Nishant </h1>
+    <br>
+    <br>
+    <!-- {%for each in centroids%}
+        <p> Centroid -> {{each}}</p>
+        <br>
+        {%for num in clusters%}
+        <h3>Points</h3>
+        <p> {{num}} </p>
+        <br>
+        <br>
+        {%endfor%}
+    {%endfor%} -->
+    {%for each, num in zip(centroids, clusters)%}
+        <p> Cluster Point: {{each}} </p>
+        <p> Points </p>
+        <p> {{num}} </p>
+        <br><br>
+    {%endfor%}
+</body>
+</html>
