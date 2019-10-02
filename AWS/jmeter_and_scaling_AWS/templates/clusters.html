@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clusters</title>
+</head>
+<body>
+    <form id="visualizeData" action = "/clustersresult" method = "POST">
+            <p>X-axis:
+                <select name="xaxis">
+                    <option value="pclass">Passanger Class</option>
+                    <option value="survived">Survived</option>
+                    <option value="age">Age</option>
+                    <option value="sex">Sex</option>
+                    <option value="sibsp">sibsp</option>
+                    <option value="parch">Parch</option>
+                    <option value="fare">Fare</option>
+                    <option value="cabin">Cabin</option>
+                    <option value="embarked">embarked</option>
+                    <!-- <option value="boat">boat</option>
+                    <option value="body">body</option> -->
+                </select>
+            </p>
+            <p>Y-axis:
+                <select name="yaxis">
+                    <option value="pclass">Passanger Class</option>
+                    <option value="survived">Survived</option>
+                    <option value="age">Age</option>
+                    <option value="sex">Sex</option>
+                    <option value="sibsp">sibsp</option>
+                    <option value="parch">Parch</option>
+                    <option value="fare">Fare</option>
+                    <option value="cabin">Cabin</option>
+                    <option value="embarked">embarked</option>
+                    <!-- <option value="boat">boat</option>
+                    <option value="body">body</option> -->
+                </select>
+            </p>
+            <p>Number of Clusters: <input type = "text" name = "kclusters" value="0"/></p>
+            <p><input type = "submit" value = "submit" /></p>
+        </form>
+</body>
+</html>
