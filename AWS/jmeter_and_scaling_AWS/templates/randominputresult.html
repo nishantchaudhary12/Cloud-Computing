@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+<p>Time taken --> {{time}} </p>
+<p>First time --> {{first}} </p>
+<br>
+{%for each in range(mag|length)%}
+<p>{{mag[each]}} ----> {{data[each]}}</p>
+    <br>
+    <br>
+{%endfor%}
+</body>
+</html>
