@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magnitude Result</title>
+     <!--Load the AJAX API-->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1> 1001568781 Chaudhary, Nishant </h1>
+    <!-- {%for key, val in data%}
+        data.addRows(
+            ['{{key}}', {{val}}]);
+        {%endfor%}
+      -->
+    <table class="columns">
+    <!--Div that will hold the pie chart-->
+    <tr>
+        <td><div id="chart_pie_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="chart_bar_div" style="border: 1px solid #ccc"></div></td>
+    </tr>
+    </table>
+    <div id="chart_hist_div" style="border: 1px solid #ccc"></div>
+    <div id="chart_scatter_div" style="width: 900px; height: 500px;"></div>
+
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawPieChart);
+      google.charts.setOnLoadCallback(drawBarChart);
+      google.charts.setOnLoadCallback(drawHistogramChart);
+      google.charts.setOnLoadCallback(drawScatterChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawPieChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Range');
+        data.addColumn('number', 'Count');
+        data.addRows([
+           {%for key, val in data%}
+                ['{{key}}', {{val}}],
+           {%endfor%}
+
+        ]);
+
+
+        // Set chart options
+        var options = {'title':'Number of instances in the range',
+                       'width':500,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_pie_div'));
+        chart.draw(data, options);
+    }
+
+        function drawBarChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Range');
+        data.addColumn('number', 'Count');
+        data.addRows([
+           {%for key, val in data%}
+                ['{{key}}', {{val}}],
+           {%endfor%}
+        ]);
+
+        var options = {'title':'Number of instances in the range',
+                       'width':500,
+                       'height':300};
+
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_bar_div'));
+        chart.draw(data, options);
+
+      }
+
+      function drawHistogramChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Range');
+        data.addColumn('number', 'Count');
+        data.addRows([
+           {%for key, val in data%}
+                ['{{key}}', {{val}}],
+           {%endfor%}
+        ]);
+
+        var options = {'title':'Number of instances in the range',
+                       'width':500,
+                       'height':300};
+
+
+        var chart = new google.visualization.Histogram(document.getElementById('chart_hist_div'));
+        chart.draw(data, options);
+
+      }
+
+      function drawScatterChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Range');
+        data.addColumn('number', 'Count');
+        data.addRows([
+           {%for key, val in data%}
+                ['{{key}}', {{val}}],
+           {%endfor%}
+        ]);
+
+        var options = {'title':'Number of instances in the range',
+                       'width':500,
+                       'height':300};
+
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_scatter_div'));
+        chart.draw(data, options);
+
+      }
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
