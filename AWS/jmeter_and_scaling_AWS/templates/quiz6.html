@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style type="text/css">
+        .text{
+
+  position: absolute;
+  top: 500px;
+  bottom: 0px;
+  right: 100px;
+  width: 800px;
+  height: 100px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> CSE 6331 6:00</h1>
+        {{start}}
+        {{end}}
+        <h2 class="text">Chaudhary, Nishant 8781</h2>
+        {{data}}
+
+            {%if data%}
+                <ul> <img src = "static/images/{{data}}">
+                </ul>
+            {%else%}
+                <p>No Image</p>
+            {%endif%}
+
+        </div>
+</body>
+</html>
